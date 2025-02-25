@@ -9,12 +9,21 @@
     <meta name="language" content="English">
     <title>Classes</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-    <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
-        supports it.</noscript>
+    <script>
+        function checkCode() {
+            var code = document.getElementById("codeInput").value;
+            if (code === "123") {
+                document.getElementById("playbutton").style.display = "block";
+            } else {
+                alert("Incorrect code! Please try again.");
+            }
+        }
+    </script>
+    <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that supports it.</noscript>
 </head>
 <body>
-    <button id="playbutton" onclick="window.location.href='../ruffle-example/game.html';">Play Now!</button>
+    <input type="text" id="codeInput" placeholder="Enter code 123">
+    <button onclick="checkCode()">Submit</button>
+    <button id="playbutton" style="display: none;" onclick="window.location.href='../ruffle-example/game.html';">Play Now!</button>
 </body>
 </html>
-
